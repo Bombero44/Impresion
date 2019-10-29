@@ -1,0 +1,68 @@
+c:\users\ctezo\source\repos\ModImpresion\ModImpresion\bin\Debug\ModImpresion.exe.config
+c:\users\ctezo\source\repos\ModImpresion\ModImpresion\bin\Debug\ModImpresion.exe
+c:\users\ctezo\source\repos\ModImpresion\ModImpresion\bin\Debug\ModImpresion.pdb
+c:\users\ctezo\source\repos\ModImpresion\ModImpresion\bin\Debug\itextsharp.dll
+c:\users\ctezo\source\repos\ModImpresion\ModImpresion\bin\Debug\itextsharp.xml
+c:\users\ctezo\source\repos\ModImpresion\ModImpresion\obj\Debug\ModImpresion.csprojAssemblyReference.cache
+c:\users\ctezo\source\repos\ModImpresion\ModImpresion\obj\Debug\ModImpresion.csproj.CoreCompileInputs.cache
+c:\users\ctezo\source\repos\ModImpresion\ModImpresion\obj\Debug\ModImpresion.csproj.CopyComplete
+c:\users\ctezo\source\repos\ModImpresion\ModImpresion\obj\Debug\ModImpresion.exe
+c:\users\ctezo\source\repos\ModImpresion\ModImpresion\obj\Debug\ModImpresion.pdb
+C:\Users\ESQUIVEL\Documents\Visual Studio 2017\Proyects\ModImpresion\ModImpresion\bin\Debug\ModImpresion.exe.config
+C:\Users\ESQUIVEL\Documents\Visual Studio 2017\Proyects\ModImpresion\ModImpresion\bin\Debug\ModImpresion.exe
+C:\Users\ESQUIVEL\Documents\Visual Studio 2017\Proyects\ModImpresion\ModImpresion\bin\Debug\ModImpresion.pdb
+C:\Users\ESQUIVEL\Documents\Visual Studio 2017\Proyects\ModImpresion\ModImpresion\bin\Debug\itextsharp.dll
+C:\Users\ESQUIVEL\Documents\Visual Studio 2017\Proyects\ModImpresion\ModImpresion\bin\Debug\itextsharp.xml
+C:\Users\ESQUIVEL\Documents\Visual Studio 2017\Proyects\ModImpresion\ModImpresion\obj\Debug\ModImpresion.csprojAssemblyReference.cache
+C:\Users\ESQUIVEL\Documents\Visual Studio 2017\Proyects\ModImpresion\ModImpresion\obj\Debug\ModImpresion.csproj.CoreCompileInputs.cache
+C:\Users\ESQUIVEL\Documents\Visual Studio 2017\Proyects\ModImpresion\ModImpresion\obj\Debug\ModImpresion.csproj.CopyComplete
+C:\Users\ESQUIVEL\Documents\Visual Studio 2017\Proyects\ModImpresion\ModImpresion\obj\Debug\ModImpresion.exe
+C:\Users\ESQUIVEL\Documents\Visual Studio 2017\Proyects\ModImpresion\ModImpresion\obj\Debug\ModImpresion.pdb
+C:\Users\ctezo\Desktop\ModImpresion\ModImpresion\ModImpresion\obj\Debug\ModImpresion.csprojAssemblyReference.cache
+C:\Users\ctezo\Desktop\ModImpresion\ModImpresion\ModImpresion\obj\Debug\ModImpresion.csproj.CoreCompileInputs.cache
+C:\Users\ctezo\Desktop\ModImpresion\ModImpresion\ModImpresion\obj\Debug\ModImpresion.exe
+C:\Users\ctezo\Desktop\ModImpresion\ModImpresion\ModImpresion\obj\Debug\ModImpresion.pdb
+C:\Users\ctezo\Desktop\ModImpresion\ModImpresion\ModImpresion\bin\Debug\ModImpresion.exe.config
+C:\Users\ctezo\Desktop\ModImpresion\ModImpresion\ModImpresion\bin\Debug\ModImpresion.exe
+C:\Users\ctezo\Desktop\ModImpresion\ModImpresion\ModImpresion\bin\Debug\ModImpresion.pdb
+C:\Users\ctezo\Desktop\ModImpresion\ModImpresion\ModImpresion\bin\Debug\itextsharp.dll
+C:\Users\ctezo\Desktop\ModImpresion\ModImpresion\ModImpresion\bin\Debug\itextsharp.xml
+C:\Users\ctezo\Desktop\ModImpresion\ModImpresion\ModImpresion\obj\Debug\ModImpresion.csproj.CopyComplete
+C:\Users\ESQUIVEL\Documents\Visual Studio 2017\Proyects\ModImpresion4\ModImpresion\bin\Debug\ModImpresion.exe.config
+C:\Users\ESQUIVEL\Documents\Visual Studio 2017\Proyects\ModImpresion4\ModImpresion\bin\Debug\ModImpresion.exe
+C:\Users\ESQUIVEL\Documents\Visual Studio 2017\Proyects\ModImpresion4\ModImpresion\bin\Debug\ModImpresion.pdb
+C:\Users\ESQUIVEL\Documents\Visual Studio 2017\Proyects\ModImpresion4\ModImpresion\bin\Debug\itextsharp.dll
+C:\Users\ESQUIVEL\Documents\Visual Studio 2017\Proyects\ModImpresion4\ModImpresion\bin\Debug\itextsharp.xml
+C:\Users\ESQUIVEL\Documents\Visual Studio 2017\Proyects\ModImpresion4\ModImpresion\obj\Debug\ModImpresion.csprojAssemblyReference.cache
+C:\Users\ESQUIVEL\Documents\Visual Studio 2017\Proyects\ModImpresion4\ModImpresion\obj\Debug\ModImpresion.csproj.CoreCompileInputs.cache
+C:\Users\ESQUIVEL\Documents\Visual Studio 2017\Proyects\ModImpresion4\ModImpresion\obj\Debug\ModImpresion.csproj.CopyComplete
+C:\Users\ESQUIVEL\Documents\Visual Studio 2017\Proyects\ModImpresion4\ModImpresion\obj\Debug\ModImpresion.exe
+C:\Users\ESQUIVEL\Documents\Visual Studio 2017\Proyects\ModImpresion4\ModImpresion\obj\Debug\ModImpresion.pdb
+D:\ModImpresion4\ModImpresion\bin\Debug\ModImpresion.exe.config
+D:\ModImpresion4\ModImpresion\obj\Debug\ModImpresion.exe
+D:\ModImpresion4\ModImpresion\obj\Debug\ModImpresion.pdb
+D:\ModImpresion4\ModImpresion\bin\Debug\ModImpresion.exe
+D:\ModImpresion4\ModImpresion\bin\Debug\ModImpresion.pdb
+D:\ModImpresion4\ModImpresion\bin\Debug\itextsharp.dll
+D:\ModImpresion4\ModImpresion\bin\Debug\itextsharp.xml
+D:\ModImpresion4\ModImpresion\obj\Debug\ModImpresion.csprojResolveAssemblyReference.cache
+C:\Users\ESQUIVEL\Desktop\ModImpresionModificado\ModImpresion\obj\Debug\ModImpresion.csprojAssemblyReference.cache
+C:\Users\ESQUIVEL\Desktop\ModImpresionModificado\ModImpresion\obj\Debug\ModImpresion.csproj.CoreCompileInputs.cache
+C:\Users\ESQUIVEL\Desktop\ModImpresionModificado\ModImpresion\obj\Debug\ModImpresion.exe
+C:\Users\ESQUIVEL\Desktop\ModImpresionModificado\ModImpresion\obj\Debug\ModImpresion.pdb
+C:\Users\ESQUIVEL\Desktop\ModImpresionModificado\ModImpresion\bin\Debug\ModImpresion.exe.config
+C:\Users\ESQUIVEL\Desktop\ModImpresionModificado\ModImpresion\bin\Debug\ModImpresion.exe
+C:\Users\ESQUIVEL\Desktop\ModImpresionModificado\ModImpresion\bin\Debug\ModImpresion.pdb
+C:\Users\ESQUIVEL\Desktop\ModImpresionModificado\ModImpresion\bin\Debug\itextsharp.dll
+C:\Users\ESQUIVEL\Desktop\ModImpresionModificado\ModImpresion\bin\Debug\itextsharp.xml
+C:\Users\ESQUIVEL\Desktop\ModImpresionModificado\ModImpresion\obj\Debug\ModImpresion.csproj.CopyComplete
+C:\Users\ctezo\Desktop\ModImpresionModificado\ModImpresionModificado\ModImpresion\obj\Debug\ModImpresion.csprojAssemblyReference.cache
+C:\Users\ctezo\Desktop\ModImpresionModificado\ModImpresionModificado\ModImpresion\obj\Debug\ModImpresion.csproj.CoreCompileInputs.cache
+C:\Users\ctezo\Desktop\ModImpresionModificado\ModImpresionModificado\ModImpresion\obj\Debug\ModImpresion.exe
+C:\Users\ctezo\Desktop\ModImpresionModificado\ModImpresionModificado\ModImpresion\obj\Debug\ModImpresion.pdb
+C:\Users\ctezo\Desktop\ModImpresionModificado\ModImpresionModificado\ModImpresion\bin\Debug\ModImpresion.exe.config
+C:\Users\ctezo\Desktop\ModImpresionModificado\ModImpresionModificado\ModImpresion\bin\Debug\ModImpresion.exe
+C:\Users\ctezo\Desktop\ModImpresionModificado\ModImpresionModificado\ModImpresion\bin\Debug\ModImpresion.pdb
+C:\Users\ctezo\Desktop\ModImpresionModificado\ModImpresionModificado\ModImpresion\bin\Debug\itextsharp.dll
+C:\Users\ctezo\Desktop\ModImpresionModificado\ModImpresionModificado\ModImpresion\bin\Debug\itextsharp.xml
+C:\Users\ctezo\Desktop\ModImpresionModificado\ModImpresionModificado\ModImpresion\obj\Debug\ModImpresion.csproj.CopyComplete
