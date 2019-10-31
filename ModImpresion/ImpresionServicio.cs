@@ -24,8 +24,8 @@ namespace ModImpresion
         Font _NewRomanFont12 = new Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 12, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
         Font _standardBoldFont = new Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 11, iTextSharp.text.Font.BOLD, BaseColor.BLACK);
         Font _NewRomanBoldFont = new Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 13, iTextSharp.text.Font.BOLD, BaseColor.BLACK);
-        
         string strConexion = "<Tuconexion>";
+        
         Boolean Result = false;
         MemoryStream mem;
         Document doc;
@@ -1601,7 +1601,7 @@ namespace ModImpresion
                     _Cell.Colspan = 12;
                     tblContenido.AddCell(_Cell);
 
-                    _Cell = new PdfPCell(new Paragraph("Trasladado (S) A: ", _standardBoldFont));
+                    _Cell = new PdfPCell(new Paragraph("Trasladado (s) A: ", _standardBoldFont));
                     _Cell.BorderWidth = 0;
                     _Cell.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
                     _Cell.Colspan = 3;
@@ -1641,7 +1641,7 @@ namespace ModImpresion
 
 
 
-                    _Cell = new PdfPCell(new Paragraph("Unidad (ES):", _standardBoldFont));
+                    _Cell = new PdfPCell(new Paragraph("Unidad (es):", _standardBoldFont));
                     _Cell.BorderWidth = 0;
                     _Cell.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
                     _Cell.Colspan = 2;
@@ -3255,7 +3255,7 @@ namespace ModImpresion
                     widths = new float[] { 17f, 85f };
                     tblContenido.SetWidths(widths);
 
-                    _Cell = new PdfPCell(new Paragraph("Domicilio (S): ", _standardBoldFont));
+                    _Cell = new PdfPCell(new Paragraph("Domicilio (s): ", _standardBoldFont));
                     _Cell.BorderWidth = 0;
                     _Cell.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
                     _Cell.Colspan = 1;
@@ -3268,16 +3268,16 @@ namespace ModImpresion
 
                         foreach (DataRow item in DtPerAten.Rows)
                         {
-                            direcciones = direcciones + item["Domicilio"].ToString() + ", ";
+                            direcciones = direcciones + item["Domicilio"].ToString().Trim() + ", ";
 
-                            acompanante = acompanante + item["Acompanante"].ToString() + ", ";
+                            acompanante = acompanante + item["Acompanante"].ToString().Trim() + ", ";
                         }
 
                         //Contendio desde la BD
                         _Cell = new PdfPCell(new Paragraph(direcciones, _standardFont));
                         _Cell.BorderWidth = 0;
                         _Cell.BorderWidthBottom = 1;
-                        _Cell.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
+                        _Cell.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
                         _Cell.Colspan = 11;
                         tblContenido.AddCell(_Cell);
 
