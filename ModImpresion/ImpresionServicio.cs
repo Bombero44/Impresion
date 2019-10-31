@@ -24,7 +24,7 @@ namespace ModImpresion
         Font _NewRomanFont12 = new Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 12, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
         Font _standardBoldFont = new Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 11, iTextSharp.text.Font.BOLD, BaseColor.BLACK);
         Font _NewRomanBoldFont = new Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 13, iTextSharp.text.Font.BOLD, BaseColor.BLACK);
-
+        
         string strConexion = "<Tuconexion>";
         Boolean Result = false;
         MemoryStream mem;
@@ -1108,7 +1108,7 @@ namespace ModImpresion
             using (SqlConnection con = new SqlConnection(strConexion))
             {
                 con.Open();
-                using (SqlDataAdapter da = new SqlDataAdapter("select CONCAT(SG.Direccion, ', Zona ', SG.Zona, ', ',  muni.Nombre_Muni, ', ', depto.Nombre_Depto) Direcciones FROM[dbo].[cvb_Servicio_Gral] SG INNER JOIN [dbo].[cvb_Tbl_Cat_Muni] muni ON muni.Cod_Muni = SG.Cod_Muni INNER JOIN [dbo].[cvb_Tbl_Cat_Depto] depto on muni.Cod_Depto = depto.Cod_Depto where SG.NoControl = @NoControl", con))
+                using (SqlDataAdapter da = new SqlDataAdapter("select CONCAT(SG.Direccion, ', Zona ', SG.Zona, ', ', TLug.[Descripcion_Lugar], ' ', Lug.[Descripcion_Lugar], ', ',  muni.Nombre_Muni, ', ', depto.Nombre_Depto) Direcciones FROM [dbo].[cvb_Servicio_Gral] SG INNER JOIN [dbo].[cvb_Tbl_Cat_Muni] muni ON muni.Cod_Muni = SG.Cod_Muni INNER JOIN [dbo].[cvb_Tbl_Cat_Depto] depto on muni.Cod_Depto = depto.Cod_Depto INNER JOIN [dbo].[cvb_Lugar] Lug on SG.[Cod_Lugar] = lug.[Cod_Lugar] INNER JOIN [dbo].[cvb_Tbl_Cat_Tipo_Lugar] Tlug ON Tlug.[Cod_Tipo_Lugar] = Lug.[Cod_Tipo_Lugar] where SG.NoControl = @NoControl", con))
                 {
                     da.SelectCommand.Parameters.AddWithValue("@NoControl", NoControl);
 
@@ -1984,7 +1984,7 @@ namespace ModImpresion
             using (SqlConnection con = new SqlConnection(strConexion))
             {
                 con.Open();
-                using (SqlDataAdapter da = new SqlDataAdapter("select CONCAT(SG.Direccion, ', Zona ', SG.Zona, ', ',  muni.Nombre_Muni, ', ', depto.Nombre_Depto) Direcciones FROM[dbo].[cvb_Servicio_Gral] SG INNER JOIN [dbo].[cvb_Tbl_Cat_Muni] muni ON muni.Cod_Muni = SG.Cod_Muni INNER JOIN [dbo].[cvb_Tbl_Cat_Depto] depto on muni.Cod_Depto = depto.Cod_Depto where SG.NoControl = @NoControl", con))
+                using (SqlDataAdapter da = new SqlDataAdapter("select CONCAT(SG.Direccion, ', Zona ', SG.Zona, ', ', TLug.[Descripcion_Lugar], ' ', Lug.[Descripcion_Lugar], ', ',  muni.Nombre_Muni, ', ', depto.Nombre_Depto) Direcciones FROM [dbo].[cvb_Servicio_Gral] SG INNER JOIN [dbo].[cvb_Tbl_Cat_Muni] muni ON muni.Cod_Muni = SG.Cod_Muni INNER JOIN [dbo].[cvb_Tbl_Cat_Depto] depto on muni.Cod_Depto = depto.Cod_Depto INNER JOIN [dbo].[cvb_Lugar] Lug on SG.[Cod_Lugar] = lug.[Cod_Lugar] INNER JOIN [dbo].[cvb_Tbl_Cat_Tipo_Lugar] Tlug ON Tlug.[Cod_Tipo_Lugar] = Lug.[Cod_Tipo_Lugar] where SG.NoControl = @NoControl", con))
                 {
                     da.SelectCommand.Parameters.AddWithValue("@NoControl", NoControl);
 
@@ -2687,7 +2687,7 @@ namespace ModImpresion
             using (SqlConnection con = new SqlConnection(strConexion))
             {
                 con.Open();
-                using (SqlDataAdapter da = new SqlDataAdapter("select CONCAT(SG.Direccion, ', Zona ', SG.Zona, ', ',  muni.Nombre_Muni, ', ', depto.Nombre_Depto) Direcciones FROM[dbo].[cvb_Servicio_Gral] SG INNER JOIN [dbo].[cvb_Tbl_Cat_Muni] muni ON muni.Cod_Muni = SG.Cod_Muni INNER JOIN [dbo].[cvb_Tbl_Cat_Depto] depto on muni.Cod_Depto = depto.Cod_Depto where SG.NoControl = @NoControl", con))
+                using (SqlDataAdapter da = new SqlDataAdapter("select CONCAT(SG.Direccion, ', Zona ', SG.Zona, ', ', TLug.[Descripcion_Lugar], ' ', Lug.[Descripcion_Lugar], ', ',  muni.Nombre_Muni, ', ', depto.Nombre_Depto) Direcciones FROM [dbo].[cvb_Servicio_Gral] SG INNER JOIN [dbo].[cvb_Tbl_Cat_Muni] muni ON muni.Cod_Muni = SG.Cod_Muni INNER JOIN [dbo].[cvb_Tbl_Cat_Depto] depto on muni.Cod_Depto = depto.Cod_Depto INNER JOIN [dbo].[cvb_Lugar] Lug on SG.[Cod_Lugar] = lug.[Cod_Lugar] INNER JOIN [dbo].[cvb_Tbl_Cat_Tipo_Lugar] Tlug ON Tlug.[Cod_Tipo_Lugar] = Lug.[Cod_Tipo_Lugar] where SG.NoControl = @NoControl", con))
                 {
                     da.SelectCommand.Parameters.AddWithValue("@NoControl", NoControl);
 
@@ -3859,7 +3859,7 @@ namespace ModImpresion
             using (SqlConnection con = new SqlConnection(strConexion))
             {
                 con.Open();
-                using (SqlDataAdapter da = new SqlDataAdapter("select CONCAT(SG.Direccion, ', Zona ', SG.Zona, ', ', RTRIM(muni.Nombre_Muni), ', ', RTRIM(depto.Nombre_Depto)) Direcciones FROM[dbo].[cvb_Servicio_Gral] SG INNER JOIN [dbo].[cvb_Tbl_Cat_Muni] muni ON muni.Cod_Muni = SG.Cod_Muni INNER JOIN [dbo].[cvb_Tbl_Cat_Depto] depto on muni.Cod_Depto = depto.Cod_Depto where SG.NoControl = @NoControl", con))
+                using (SqlDataAdapter da = new SqlDataAdapter("select CONCAT(SG.Direccion, ', Zona ', SG.Zona, ', ', TLug.[Descripcion_Lugar], ' ', Lug.[Descripcion_Lugar], ', ',  muni.Nombre_Muni, ', ', depto.Nombre_Depto) Direcciones FROM [dbo].[cvb_Servicio_Gral] SG INNER JOIN [dbo].[cvb_Tbl_Cat_Muni] muni ON muni.Cod_Muni = SG.Cod_Muni INNER JOIN [dbo].[cvb_Tbl_Cat_Depto] depto on muni.Cod_Depto = depto.Cod_Depto INNER JOIN [dbo].[cvb_Lugar] Lug on SG.[Cod_Lugar] = lug.[Cod_Lugar] INNER JOIN [dbo].[cvb_Tbl_Cat_Tipo_Lugar] Tlug ON Tlug.[Cod_Tipo_Lugar] = Lug.[Cod_Tipo_Lugar] where SG.NoControl = @NoControl", con))
                 {
                     da.SelectCommand.Parameters.AddWithValue("@NoControl", NoControl);
 
