@@ -2837,7 +2837,7 @@ namespace ModImpresion
                         tblContenido.AddCell(_Cell);
 
                         // _Cell = new PdfPCell(new Paragraph("30", _standardFont));
-                        _Cell = new PdfPCell(new Paragraph("X", _standardFont));
+                        _Cell = new PdfPCell(new Paragraph(dr["NoTelefono"].ToString(), _standardFont));
                         _Cell.BorderWidth = 0;
                         _Cell.BorderWidthBottom = 1;
                         _Cell.Colspan = 1;
@@ -3776,7 +3776,7 @@ namespace ModImpresion
             using (SqlConnection con = new SqlConnection(strConexion))
             {
                 con.Open();
-                using (SqlDataAdapter da = new SqlDataAdapter("SELECT TBFRM.NoControl, TBFRM.Fecha_Servicio,TBFRM.Cod_Compania,TBAVISO.Descripcion_Aviso,TBFRM.Min_Trabajados, TBFRM.Nombre_Solicitante, TBFRM.Direccion, TBFRM.Cod_Compania_Salida,TBFRM.Cod_Compania_Entrada,TBFRM.Fecha_Hora_Entrada,TBFRM.Fecha_Hora_Salida,TBFRM.Observaciones, TBSERV.Descripcion_Servicio,CONCAT(TBPER.Nombre, ' ',TBPER.Apellido)RadioTelefonista, CONCAT (TBPER_Formulado.Nombre, ' ', TBPER_Formulado.Apellido)Formuladopor,CONCAT (Piloto.Nombre, ' ', Piloto.Apellido)Piloto,CONCAT (Jefe.Nombre, ' ', Jefe.Apellido)Jefe FROM cvb_Servicio_Gral TBFRM INNER JOIN cvb_Tbl_Cat_Servicio TBSERV ON TBSERV.Cod_Servicio = TBFRM.Cod_Servicio INNER JOIN cvb_Personal TBPER ON TBPER.Carnet = TBFRM.Carnet_RadioTelefonista INNER JOIN cvb_Tbl_Cat_FrmAviso TBAVISO ON TBAVISO.Cod_TipoAviso = TBFRM.Cod_TipoAviso INNER JOIN cvb_Personal TBPER_Formulado ON TBPER_Formulado.Carnet  = TBFRM.Carnet_FormuladoPor INNER JOIN cvb_Personal Piloto ON Piloto.Carnet  = TBFRM.Carnet_ConformePiloto INNER JOIN cvb_Personal Jefe ON Jefe.Carnet  = TBFRM.Carnet_VoBo where TBFRM.NoControl = @NoControl and TBFRM.Cod_Compania = @Cod_Compania", con))
+                using (SqlDataAdapter da = new SqlDataAdapter("SELECT TBFRM.NoControl, TBFRM.Fecha_Servicio,TBFRM.Cod_Compania,TBAVISO.Descripcion_Aviso,TBFRM.Min_Trabajados, TBFRM.Nombre_Solicitante, TBFRM.Direccion, TBFRM.Cod_Compania_Salida,TBFRM.Cod_Compania_Entrada,TBFRM.[NoTelefono], TBFRM.Fecha_Hora_Entrada,TBFRM.Fecha_Hora_Salida,TBFRM.Observaciones, TBSERV.Descripcion_Servicio,CONCAT(TBPER.Nombre, ' ',TBPER.Apellido)RadioTelefonista, CONCAT (TBPER_Formulado.Nombre, ' ', TBPER_Formulado.Apellido)Formuladopor,CONCAT (Piloto.Nombre, ' ', Piloto.Apellido)Piloto,CONCAT (Jefe.Nombre, ' ', Jefe.Apellido)Jefe FROM cvb_Servicio_Gral TBFRM INNER JOIN cvb_Tbl_Cat_Servicio TBSERV ON TBSERV.Cod_Servicio = TBFRM.Cod_Servicio INNER JOIN cvb_Personal TBPER ON TBPER.Carnet = TBFRM.Carnet_RadioTelefonista INNER JOIN cvb_Tbl_Cat_FrmAviso TBAVISO ON TBAVISO.Cod_TipoAviso = TBFRM.Cod_TipoAviso INNER JOIN cvb_Personal TBPER_Formulado ON TBPER_Formulado.Carnet  = TBFRM.Carnet_FormuladoPor INNER JOIN cvb_Personal Piloto ON Piloto.Carnet  = TBFRM.Carnet_ConformePiloto INNER JOIN cvb_Personal Jefe ON Jefe.Carnet  = TBFRM.Carnet_VoBo where TBFRM.NoControl = @NoControl and TBFRM.Cod_Compania = @Cod_Compania", con))
 
 
                 {
