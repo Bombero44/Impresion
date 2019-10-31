@@ -1124,7 +1124,7 @@ namespace ModImpresion
             using (SqlConnection con = new SqlConnection(strConexion))
             {
                 con.Open();
-                using (SqlDataAdapter da = new SqlDataAdapter("SELECT CONCAT(Per.Nombre,' ',Per.Apellido)PersonalDestacado,(TP.Descripcion)Grado FROM cvb_Personal Per LEFT JOIN cvb_Persona_Destacada PDes ON PDes.Carnet = Per.Carnet INNER JOIN cvb_Servicio_Gral SG ON SG.NoControl = PDes.NoControl INNER JOIN cvb_Asignacion_Personal ASP ON ASP.Carnet = PDes.Carnet INNER JOIN cvb_Tbl_Cat_Cargo_Personal TP ON TP.Cod_Cargo = ASP.Cod_Cargo WHERE SG.NoControl = @NoControl", con))
+                using (SqlDataAdapter da = new SqlDataAdapter("Select CONCAT(Per.Nombre,' ',Per.Apellido) PersonalDestacado, [dbo].[GetCargoPersonal](PDes.Carnet) Grado from cvb_Persona_Destacada PDes INNER JOIN cvb_Personal Per ON PDes.Carnet = Per.Carnet WHERE PDes.NoControl = @NoControl and PDes.Estado = '1'", con))
                 {
                     da.SelectCommand.Parameters.AddWithValue("@NoControl", NoControl);
 
