@@ -30,7 +30,7 @@ namespace ModImpresion
             */
 
             Console.WriteLine("Create Report");
-            string resBase64Report = mImp.GeneraPDFBase64(3 /*Cod_Servicio*/);
+            string resBase64Report = mImp.GeneraPDFBase64(2 /*Cod_Servicio*/);
             string PathArchivo = System.AppDomain.CurrentDomain.BaseDirectory;
             PathArchivo = PathArchivo + string.Format("Temp\\{0}_{1}.pdf", mImp.Compania, mImp.NoControl);
 

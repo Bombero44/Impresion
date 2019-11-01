@@ -871,7 +871,7 @@ namespace ModImpresion
                 tblContenido2.AddCell(_Cell);
 
 
-                _Cell = new PdfPCell(new Paragraph("Unidad (ES):", _standardBoldFont));
+                _Cell = new PdfPCell(new Paragraph("Unidad (es):", _standardBoldFont));
                 _Cell.BorderWidth = 0;
                 _Cell.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
                 _Cell.Colspan = 2;
@@ -914,7 +914,7 @@ namespace ModImpresion
                     tblContenido2.AddCell(_Cell);
                 }
 
-                _Cell = new PdfPCell(new Paragraph("Piloto (S):", _standardBoldFont));
+                _Cell = new PdfPCell(new Paragraph("Piloto (s):", _standardBoldFont));
                 _Cell.BorderWidth = 0;
                 _Cell.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
                 _Cell.Colspan = 2;
