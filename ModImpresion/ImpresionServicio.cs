@@ -24,7 +24,7 @@ namespace ModImpresion
         Font _NewRomanFont12 = new Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 12, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
         Font _standardBoldFont = new Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 11, iTextSharp.text.Font.BOLD, BaseColor.BLACK);
         Font _NewRomanBoldFont = new Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 13, iTextSharp.text.Font.BOLD, BaseColor.BLACK);
-        string strConexion = "tu conexion";
+        string strConexion = "Conexion";
         
         Boolean Result = false;
         MemoryStream mem;
@@ -3045,7 +3045,7 @@ namespace ModImpresion
                     _Cell = new PdfPCell(new Paragraph("Nombre (s) de (los) Pacientes:", _standardBoldFont));
                     _Cell.BorderWidth = 0;
                     _Cell.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
-                    _Cell.Colspan = 12;
+                    _Cell.Colspan = 3;
                     tblContenido.AddCell(_Cell);
 
 
@@ -3057,7 +3057,15 @@ namespace ModImpresion
                     {
                         foreach (DataRow item in DtPerAten.Rows)
                         {
-                            PerAten = PerAten + item["Nombre"] + ", ";
+                            string persona = "";
+                            persona = persona+item["Fallecido"];
+                            if (persona == "No")
+                            {
+                                PerAten = PerAten + item["Nombre"] + ", ";
+                                persona = "";
+                            }
+                            
+                            
                         }
                     }
                     else
@@ -3067,7 +3075,7 @@ namespace ModImpresion
                     _Cell.BorderWidth = 0;
                     _Cell.BorderWidthBottom = 1;
                     _Cell.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
-                    _Cell.Colspan = 12;
+                    _Cell.Colspan = 9;
                     tblContenido.AddCell(_Cell);
 
 
@@ -3079,31 +3087,18 @@ namespace ModImpresion
                     {
                         foreach (DataRow item in DtPerAten.Rows)
                         {
-                            fallecidos = fallecidos + item["Fallecido"];
-                            if (fallecidos == "No")
-                            {
 
-                                fallecidos = "";
-                                _Cell = new PdfPCell(new Paragraph("", _standardFont));
-                                _Cell.BorderWidth = 0;
-
-                                _Cell.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
-                                _Cell.Colspan = 12;
-                                tblContenido.AddCell(_Cell);
-                            }
-                            else
+                            string persona = "";
+                            persona = persona + item["Fallecido"];
+                            if (persona == "Si")
                             {
                                 ValidarFallecidos = true;
-                                fallecidos = fallecidos + item["Nombre"];
-
-                                fallecidos = "";
-                                _Cell = new PdfPCell(new Paragraph(fallecidos, _standardFont));
-                                _Cell.BorderWidth = 0;
-                                _Cell.BorderWidthBottom = 1;
-                                _Cell.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
-                                _Cell.Colspan = 12;
-                                tblContenido.AddCell(_Cell);
+                                fallecidos = fallecidos + item["Nombre"] + ", ";
+                                persona = "";
                             }
+
+
+                            
                         }
                     }
                     else
@@ -3118,15 +3113,17 @@ namespace ModImpresion
                         _Cell = new PdfPCell(new Paragraph("Fallecidos: ", _standardBoldFont));
                         _Cell.BorderWidth = 0;
                         _Cell.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
-                        _Cell.Colspan = 12;
+                        _Cell.Colspan = 1;
                         tblContenido.AddCell(_Cell);
 
                         _Cell = new PdfPCell(new Paragraph(fallecidos.Trim(), _standardFont));
                         _Cell.BorderWidth = 0;
                         _Cell.BorderWidthBottom = 1;
                         _Cell.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
-                        _Cell.Colspan = 12;
+                        _Cell.Colspan = 11;
                         tblContenido.AddCell(_Cell);
+
+                        
 
                         _Cell = new PdfPCell(new Paragraph("Si: ", _standardBoldFont));
                         _Cell.BorderWidth = 0;

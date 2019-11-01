@@ -74,3 +74,11 @@ C:\wamp\www\Impresion\ModImpresion\bin\Debug\ModImpresion.exe
 C:\wamp\www\Impresion\ModImpresion\bin\Debug\ModImpresion.pdb
 C:\wamp\www\Impresion\ModImpresion\bin\Debug\itextsharp.dll
 C:\wamp\www\Impresion\ModImpresion\bin\Debug\itextsharp.xml
+C:\Users\Peter\Documents\GitHub\Impresion\ModImpresion\bin\Debug\ModImpresion.exe.config
+C:\Users\Peter\Documents\GitHub\Impresion\ModImpresion\obj\Debug\ModImpresion.exe
+C:\Users\Peter\Documents\GitHub\Impresion\ModImpresion\obj\Debug\ModImpresion.pdb
+C:\Users\Peter\Documents\GitHub\Impresion\ModImpresion\bin\Debug\ModImpresion.exe
+C:\Users\Peter\Documents\GitHub\Impresion\ModImpresion\bin\Debug\ModImpresion.pdb
+C:\Users\Peter\Documents\GitHub\Impresion\ModImpresion\bin\Debug\itextsharp.dll
+C:\Users\Peter\Documents\GitHub\Impresion\ModImpresion\bin\Debug\itextsharp.xml
+C:\Users\Peter\Documents\GitHub\Impresion\ModImpresion\obj\Debug\ModImpresion.csprojResolveAssemblyReference.cache
