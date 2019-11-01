@@ -66,3 +66,11 @@ C:\Users\ctezo\Desktop\ModImpresionModificado\ModImpresionModificado\ModImpresio
 C:\Users\ctezo\Desktop\ModImpresionModificado\ModImpresionModificado\ModImpresion\bin\Debug\itextsharp.dll
 C:\Users\ctezo\Desktop\ModImpresionModificado\ModImpresionModificado\ModImpresion\bin\Debug\itextsharp.xml
 C:\Users\ctezo\Desktop\ModImpresionModificado\ModImpresionModificado\ModImpresion\obj\Debug\ModImpresion.csproj.CopyComplete
+C:\wamp\www\Impresion\ModImpresion\obj\Debug\ModImpresion.csprojResolveAssemblyReference.cache
+C:\wamp\www\Impresion\ModImpresion\obj\Debug\ModImpresion.exe
+C:\wamp\www\Impresion\ModImpresion\obj\Debug\ModImpresion.pdb
+C:\wamp\www\Impresion\ModImpresion\bin\Debug\ModImpresion.exe.config
+C:\wamp\www\Impresion\ModImpresion\bin\Debug\ModImpresion.exe
+C:\wamp\www\Impresion\ModImpresion\bin\Debug\ModImpresion.pdb
+C:\wamp\www\Impresion\ModImpresion\bin\Debug\itextsharp.dll
+C:\wamp\www\Impresion\ModImpresion\bin\Debug\itextsharp.xml

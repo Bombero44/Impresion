@@ -24,7 +24,7 @@ namespace ModImpresion
         Font _NewRomanFont12 = new Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 12, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
         Font _standardBoldFont = new Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 11, iTextSharp.text.Font.BOLD, BaseColor.BLACK);
         Font _NewRomanBoldFont = new Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 13, iTextSharp.text.Font.BOLD, BaseColor.BLACK);
-        string strConexion = "<Tuconexion>";
+        string strConexion = "tu conexion";
         
         Boolean Result = false;
         MemoryStream mem;
@@ -2409,7 +2409,7 @@ namespace ModImpresion
 
                 //Convert.ToDateTime(dr["Fecha_Hora_Salida"]).ToString("hh: mm AM / PM")
 
-                _Cell = new PdfPCell(new Paragraph(Convert.ToDateTime(dr["Fecha_Hora_Salida"]).ToString("HH:mm"), _standardBoldFont));
+                _Cell = new PdfPCell(new Paragraph(Convert.ToDateTime(dr["Fecha_Hora_Salida"]).ToString("HH:mm"), _standardFont));
                 _Cell.BorderWidth = 0;
                 _Cell.BorderWidthBottom = 1;
                 _Cell.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
