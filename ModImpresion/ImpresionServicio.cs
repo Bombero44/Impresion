@@ -3214,7 +3214,7 @@ namespace ModImpresion
                     }
 
 
-                    _Cell = new PdfPCell(new Paragraph("Edad (Es): ", _standardBoldFont));
+                    _Cell = new PdfPCell(new Paragraph("Edad (es): ", _standardBoldFont));
                     _Cell.BorderWidth = 0;
                     _Cell.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
                     _Cell.Colspan = 2;
@@ -3281,7 +3281,7 @@ namespace ModImpresion
                         _Cell.Colspan = 11;
                         tblContenido.AddCell(_Cell);
 
-                        _Cell = new PdfPCell(new Paragraph("Acompañante (S):", _standardBoldFont));
+                        _Cell = new PdfPCell(new Paragraph("Acompañante (s):", _standardBoldFont));
                         _Cell.BorderWidth = 0;
                         _Cell.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
                         _Cell.Colspan = 1;
@@ -3517,7 +3517,7 @@ namespace ModImpresion
 
 
 
-                    _Cell = new PdfPCell(new Paragraph("Piloto (S):", _standardBoldFont));
+                    _Cell = new PdfPCell(new Paragraph("Piloto (s):", _standardBoldFont));
                     _Cell.BorderWidth = 0;
                     _Cell.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
                     _Cell.Colspan = 2;
@@ -3551,7 +3551,7 @@ namespace ModImpresion
                     _Cell.Colspan = 10;
                     tblContenido.AddCell(_Cell);
 
-                    _Cell = new PdfPCell(new Paragraph("Unidad (ES):", _standardBoldFont));
+                    _Cell = new PdfPCell(new Paragraph("Unidad (es):", _standardBoldFont));
                     _Cell.BorderWidth = 0;
                     _Cell.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
                     _Cell.Colspan = 2;
