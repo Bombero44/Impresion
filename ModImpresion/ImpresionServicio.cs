@@ -19,11 +19,13 @@ namespace ModImpresion
         //string PathArchivo = HttpContext.Current.Server.MapPath("~/Content/logo-completo-cvb.png");
 
         string PathArchivo = System.AppDomain.CurrentDomain.BaseDirectory + "\\Content\\logo-completo-cvb.png";
+
+
         // Creamos el tipo de Font que vamos utilizar, lo puede modificar.
-        Font _standardFont = new Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 11, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
-        Font _NewRomanFont12 = new Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 12, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
-        Font _standardBoldFont = new Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 11, iTextSharp.text.Font.BOLD, BaseColor.BLACK);
-        Font _NewRomanBoldFont = new Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 13, iTextSharp.text.Font.BOLD, BaseColor.BLACK);
+        Font _standardFont = new Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 10, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
+        Font _NewRomanFont12 = new Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 10, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
+        Font _standardBoldFont = new Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 10, iTextSharp.text.Font.BOLD, BaseColor.BLACK);
+        Font _NewRomanBoldFont = new Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 10, iTextSharp.text.Font.BOLD, BaseColor.BLACK);
         string strConexion = "Conexion";
         
         Boolean Result = false;
@@ -1092,7 +1094,7 @@ namespace ModImpresion
             using (SqlConnection con = new SqlConnection(strConexion))
             {
                 con.Open();
-                using (SqlDataAdapter da = new SqlDataAdapter("SELECT CONCAT(TipoUni.Descripcion_TipoUnidad,'-', PilotoU.Cod_Unidad)Unidad, CONCAT(Per.Nombre,' ', Per.Apellido)Piloto FROM cvb_Unidad_Asiste PilotoU INNER JOIN cvb_Tbl_Cat_Unidad catU on PilotoU.Cod_Unidad = catU.Cod_Unidad INNER JOIN cvb_Personal Per on PilotoU.Carnet_Piloto = Per.Carnet INNER JOIN cvb_Tbl_Cat_Tipo_Unidad TipoUni on catU.Tipo_Unidad = TipoUni.Cod_Tipo_Unidad WHERE PilotoU.NoControl  = @NoControl", con))
+                using (SqlDataAdapter da = new SqlDataAdapter("SELECT CONCAT(TipoUni.Descripcion_TipoUnidad,'-', PilotoU.Cod_Unidad)Unidad, CONCAT(Per.Nombre,' ', Per.Apellido)Piloto FROM cvb_Unidad_Asiste PilotoU INNER JOIN cvb_Tbl_Cat_Unidad catU on PilotoU.Cod_Unidad = catU.Cod_Unidad INNER JOIN cvb_Personal Per on PilotoU.Carnet_Piloto = Per.Carnet INNER JOIN cvb_Tbl_Cat_Tipo_Unidad TipoUni on catU.Tipo_Unidad = TipoUni.Cod_Tipo_Unidad WHERE PilotoU.NoControl  = @NoControl and PilotoU.estado = '1' ", con))
                 {
                     da.SelectCommand.Parameters.AddWithValue("@NoControl", NoControl);
 
@@ -1142,7 +1144,7 @@ namespace ModImpresion
             using (SqlConnection con = new SqlConnection(strConexion))
             {
                 con.Open();
-                using (SqlDataAdapter da = new SqlDataAdapter("select inmu.NoControl, inmu.Propietario, inmu.Lugar_Inicio_Incendio, causa.Descripcion, inmu.Valor_Aproximado, inmu.Perdidas_Aproximadas, inmu.Compania_Aseguradora from cvb_Tbl_Ince_Inmueble inmu INNER JOIN cvb_Tbl_Cat_Causa causa on inmu.Cod_Causa = causa.Cod_Causa INNER JOIN cvb_Servicio_Gral SG on SG.NoControl = inmu.NoControl where inmu.NoControl  = @NoControl", con))
+                using (SqlDataAdapter da = new SqlDataAdapter("select inmu.NoControl, inmu.Propietario, inmu.Lugar_Inicio_Incendio, causa.Descripcion, inmu.Valor_Aproximado, inmu.Perdidas_Aproximadas, inmu.Compania_Aseguradora from cvb_Tbl_Ince_Inmueble inmu INNER JOIN cvb_Tbl_Cat_Causa causa on inmu.Cod_Causa = causa.Cod_Causa INNER JOIN cvb_Servicio_Gral SG on SG.NoControl = inmu.NoControl where inmu.NoControl  = @NoControl and inmu.Estado = '1' ", con))
 
 
                 {
@@ -1162,7 +1164,7 @@ namespace ModImpresion
             using (SqlConnection con = new SqlConnection(strConexion))
             {
                 con.Open();
-                using (SqlDataAdapter da = new SqlDataAdapter("select vehi.Propietario,vehi.Conductor, tipov.Descripcion, vehi.Marca, vehi.Modelo, vehi.Placa,vehi.Valor_Aproximado, vehi.Perdidas_Aproximadas, vehi.Compania_Aseguradora from cvb_Tbl_Ince_Vehiculo vehi INNER JOIN[dbo].[cvb_Tbl_Cat_Tipo_Vehiculo] tipov ON vehi.Cod_Vehiculo = tipov.Cod_Vehiculo INNER JOIN cvb_Servicio_Gral SG ON SG.NoControl = vehi.NoControl where vehi.NoControl = @NoControl", con))
+                using (SqlDataAdapter da = new SqlDataAdapter("select vehi.Propietario,vehi.Conductor, tipov.Descripcion, vehi.Marca, vehi.Modelo, vehi.Placa,vehi.Valor_Aproximado, vehi.Perdidas_Aproximadas, vehi.Compania_Aseguradora from cvb_Tbl_Ince_Vehiculo vehi INNER JOIN[dbo].[cvb_Tbl_Cat_Tipo_Vehiculo] tipov ON vehi.Cod_Vehiculo = tipov.Cod_Vehiculo INNER JOIN cvb_Servicio_Gral SG ON SG.NoControl = vehi.NoControl where vehi.NoControl = @NoControl and vehi.Estado = '1' ", con))
 
 
                 {
@@ -1556,7 +1558,7 @@ namespace ModImpresion
                         _Cell = new PdfPCell(new Paragraph(edad, _standardFont));
                         _Cell.BorderWidth = 0;
                         _Cell.BorderWidthBottom = 1;
-                        _Cell.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
+                        _Cell.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
                         _Cell.Colspan = 4;
                         tblContenido.AddCell(_Cell);
                     }
@@ -1934,7 +1936,7 @@ namespace ModImpresion
             using (SqlConnection con = new SqlConnection(strConexion))
             {
                 con.Open();
-                using (SqlDataAdapter da = new SqlDataAdapter("SELECT  PerAten.NoControl, PerAten.Nombre, PerAten.Edad, PerAten.Domicilio, CASE PerAten.Fallecido WHEN  'S' THEN 'Si' WHEN  'N' THEN 'No' ELSE '' END AS Fallecido, PerAten.Acompanante, Tras.Descripcion, (Tras.Cod_Ubi_Traslado)Cod_Traslado, (ser.Cod_Clase_Servicio)Cod_Servicios ,ser.Des_Clase_Servicio FROM cvb_Persona_Atendida PerAten LEFT JOIN cvb_Tbl_Cat_Traslado Tras on PerAten.Cod_Ubi_Traslado = Tras.Cod_Ubi_Traslado INNER JOIN cvb_Servicio_Gral SG ON SG.NoControl = PerAten.NoControl INNER JOIN cvb_Tbl_Cat_Cls_Servicio ser ON ser.Cod_Clase_Servicio = SG.Cod_Clase_Servicio WHERE PerAten.NoControl = @NoControl", con))
+                using (SqlDataAdapter da = new SqlDataAdapter("SELECT  PerAten.NoControl, PerAten.Nombre, PerAten.Edad, PerAten.Domicilio, CASE PerAten.Fallecido WHEN  'S' THEN 'Si' WHEN  'N' THEN 'No' ELSE '' END AS Fallecido, PerAten.Acompanante, Tras.Descripcion, (Tras.Cod_Ubi_Traslado)Cod_Traslado, (ser.Cod_Clase_Servicio)Cod_Servicios ,ser.Des_Clase_Servicio FROM cvb_Persona_Atendida PerAten LEFT JOIN cvb_Tbl_Cat_Traslado Tras on PerAten.Cod_Ubi_Traslado = Tras.Cod_Ubi_Traslado INNER JOIN cvb_Servicio_Gral SG ON SG.NoControl = PerAten.NoControl INNER JOIN cvb_Tbl_Cat_Cls_Servicio ser ON ser.Cod_Clase_Servicio = SG.Cod_Clase_Servicio WHERE PerAten.NoControl = @NoControl and PerAten.estado = '1' ", con))
                 {
                     da.SelectCommand.Parameters.AddWithValue("@NoControl", NoControl);
 
@@ -1968,7 +1970,7 @@ namespace ModImpresion
             using (SqlConnection con = new SqlConnection(strConexion))
             {
                 con.Open();
-                using (SqlDataAdapter da = new SqlDataAdapter("SELECT CONCAT(TipoUni.Descripcion_TipoUnidad,'-', PilotoU.Cod_Unidad)Unidad, CONCAT(Per.Nombre, ' ',Per.Apellido)Piloto FROM cvb_Unidad_Asiste PilotoU INNER JOIN cvb_Tbl_Cat_Unidad catU on PilotoU.Cod_Unidad = catU.Cod_Unidad INNER JOIN cvb_Personal Per on PilotoU.Carnet_Piloto = Per.Carnet INNER JOIN cvb_Tbl_Cat_Tipo_Unidad TipoUni on catU.Tipo_Unidad = TipoUni.Cod_Tipo_Unidad WHERE PilotoU.NoControl  = @NoControl", con))
+                using (SqlDataAdapter da = new SqlDataAdapter("SELECT CONCAT(TipoUni.Descripcion_TipoUnidad,'-', PilotoU.Cod_Unidad)Unidad, CONCAT(Per.Nombre, ' ',Per.Apellido)Piloto FROM cvb_Unidad_Asiste PilotoU INNER JOIN cvb_Tbl_Cat_Unidad catU on PilotoU.Cod_Unidad = catU.Cod_Unidad INNER JOIN cvb_Personal Per on PilotoU.Carnet_Piloto = Per.Carnet INNER JOIN cvb_Tbl_Cat_Tipo_Unidad TipoUni on catU.Tipo_Unidad = TipoUni.Cod_Tipo_Unidad WHERE PilotoU.NoControl  = @NoControl and PilotoU.estado = '1' ", con))
                 {
                     da.SelectCommand.Parameters.AddWithValue("@NoControl", NoControl);
 
@@ -2000,7 +2002,7 @@ namespace ModImpresion
             using (SqlConnection con = new SqlConnection(strConexion))
             {
                 con.Open();
-                using (SqlDataAdapter da = new SqlDataAdapter("SELECT CONCAT(Per.Nombre, ' ', Per.Apellido) Personal_Destacado FROM cvb_Persona_Destacada PerD INNER JOIN cvb_Personal Per ON  Per.Carnet = PerD.Carnet WHERE PerD.NoControl = @NoControl", con))
+                using (SqlDataAdapter da = new SqlDataAdapter("SELECT CONCAT(Per.Nombre, ' ', Per.Apellido) Personal_Destacado FROM cvb_Persona_Destacada PerD INNER JOIN cvb_Personal Per ON  Per.Carnet = PerD.Carnet WHERE PerD.NoControl = @NoControl and PerD.Estado = '1' ", con))
                 {
                     da.SelectCommand.Parameters.AddWithValue("@NoControl", NoControl);
 
@@ -3232,7 +3234,7 @@ namespace ModImpresion
                         _Cell = new PdfPCell(new Paragraph(edad, _standardFont));
                         _Cell.BorderWidth = 0;
                         _Cell.BorderWidthBottom = 1;
-                        _Cell.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
+                        _Cell.HorizontalAlignment = PdfPCell.ALIGN_LEFT;
                         _Cell.Colspan = 3;
                         tblContenido.AddCell(_Cell);
                     }
@@ -3757,7 +3759,7 @@ namespace ModImpresion
             using (SqlConnection con = new SqlConnection(strConexion))
             {
                 con.Open();
-                using (SqlDataAdapter da = new SqlDataAdapter("SELECT  PerAten.NoControl, PerAten.Nombre, PerAten.Edad, PerAten.Domicilio, CASE PerAten.Fallecido WHEN  'S' THEN 'Si' WHEN  'N' THEN 'No' ELSE '' END AS Fallecido, PerAten.Acompanante, Tras.Descripcion, (Tras.Cod_Ubi_Traslado)Cod_Traslado, (ser.Cod_Clase_Servicio)Cod_Servicios ,ser.Des_Clase_Servicio FROM cvb_Persona_Atendida PerAten LEFT JOIN cvb_Tbl_Cat_Traslado Tras on PerAten.Cod_Ubi_Traslado = Tras.Cod_Ubi_Traslado INNER JOIN cvb_Servicio_Gral SG ON SG.NoControl = PerAten.NoControl INNER JOIN cvb_Tbl_Cat_Cls_Servicio ser ON ser.Cod_Clase_Servicio = SG.Cod_Clase_Servicio WHERE PerAten.NoControl = @NoControl", con))
+                using (SqlDataAdapter da = new SqlDataAdapter("SELECT  PerAten.NoControl, PerAten.Nombre, PerAten.Edad, PerAten.Domicilio, CASE PerAten.Fallecido WHEN  'S' THEN 'Si' WHEN  'N' THEN 'No' ELSE '' END AS Fallecido, PerAten.Acompanante, Tras.Descripcion, (Tras.Cod_Ubi_Traslado)Cod_Traslado, (ser.Cod_Clase_Servicio)Cod_Servicios ,ser.Des_Clase_Servicio FROM cvb_Persona_Atendida PerAten LEFT JOIN cvb_Tbl_Cat_Traslado Tras on PerAten.Cod_Ubi_Traslado = Tras.Cod_Ubi_Traslado INNER JOIN cvb_Servicio_Gral SG ON SG.NoControl = PerAten.NoControl INNER JOIN cvb_Tbl_Cat_Cls_Servicio ser ON ser.Cod_Clase_Servicio = SG.Cod_Clase_Servicio WHERE PerAten.NoControl = @NoControl and PerAten.Estado = '1' ", con))
                 {
                     da.SelectCommand.Parameters.AddWithValue("@NoControl", NoControl);
 
@@ -3791,7 +3793,7 @@ namespace ModImpresion
             using (SqlConnection con = new SqlConnection(strConexion))
             {
                 con.Open();
-                using (SqlDataAdapter da = new SqlDataAdapter("SELECT CONCAT(TipoUni.Descripcion_TipoUnidad,'-', PilotoU.Cod_Unidad)Unidad, CONCAT(Per.Nombre,' ', Per.Apellido)Piloto FROM cvb_Unidad_Asiste PilotoU INNER JOIN cvb_Tbl_Cat_Unidad catU on PilotoU.Cod_Unidad = catU.Cod_Unidad INNER JOIN cvb_Personal Per on PilotoU.Carnet_Piloto = Per.Carnet INNER JOIN cvb_Tbl_Cat_Tipo_Unidad TipoUni on catU.Tipo_Unidad = TipoUni.Cod_Tipo_Unidad WHERE PilotoU.NoControl  = @NoControl", con))
+                using (SqlDataAdapter da = new SqlDataAdapter("SELECT CONCAT(TipoUni.Descripcion_TipoUnidad,'-', PilotoU.Cod_Unidad)Unidad, CONCAT(Per.Nombre,' ', Per.Apellido)Piloto FROM cvb_Unidad_Asiste PilotoU INNER JOIN cvb_Tbl_Cat_Unidad catU on PilotoU.Cod_Unidad = catU.Cod_Unidad INNER JOIN cvb_Personal Per on PilotoU.Carnet_Piloto = Per.Carnet INNER JOIN cvb_Tbl_Cat_Tipo_Unidad TipoUni on catU.Tipo_Unidad = TipoUni.Cod_Tipo_Unidad WHERE PilotoU.NoControl  = @NoControl and PilotoU.estado = '1' ", con))
                 {
                     da.SelectCommand.Parameters.AddWithValue("@NoControl", NoControl);
 
@@ -3807,7 +3809,7 @@ namespace ModImpresion
             using (SqlConnection con = new SqlConnection(strConexion))
             {
                 con.Open();
-                using (SqlDataAdapter da = new SqlDataAdapter("SELECT CONCAT(Per.Nombre, ' ', Per.Apellido) Personal_Destacado FROM cvb_Persona_Destacada PerD INNER JOIN cvb_Personal Per ON  Per.Carnet = PerD.Carnet WHERE PerD.NoControl = @NoControl", con))
+                using (SqlDataAdapter da = new SqlDataAdapter("SELECT CONCAT(Per.Nombre, ' ', Per.Apellido) Personal_Destacado FROM cvb_Persona_Destacada PerD INNER JOIN cvb_Personal Per ON  Per.Carnet = PerD.Carnet WHERE PerD.NoControl = @NoControl and PerD.Estado = '1' ", con))
                 {
                     da.SelectCommand.Parameters.AddWithValue("@NoControl", NoControl);
 
@@ -3849,7 +3851,6 @@ namespace ModImpresion
             }
             return dataTable;
         }
-
         private DataTable GetDireccionAmbulancia()
         {
             DataTable dataTable = new DataTable();
